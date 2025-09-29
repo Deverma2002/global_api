@@ -1,0 +1,42 @@
+#  ############### starting ## invoicedeploy.yml ####################
+#  name: Deploy Cloud Function
+#  ### Use below code when you have to auto-deployment ##################
+#  on:
+#    push:
+#      branches: [ "main" ]  # or whichever branch you want to auto-deploy from
+ 
+ ## To disable automatic deployment on every push and instead only deploy when you manually click “Run workflow  ############
+ name: Manual Deploy 
+ on:
+   workflow_dispatch:
+ ###### ###### ###### ###### ###### ######
+ jobs:
+   build-and-deploy:
+     runs-on: ubuntu-latest
+ 
+     steps:
+       # 1) Check out your repository code
+       - name: Check out code
+         uses: actions/checkout@v3
+ 
+       # 2) Set up the gcloud CLI using a service account key (stored as a GitHub secret)
+       #- name: Set up gcloud
+        # uses: google-github-actions/setup-gcloud@v1
+         #with:
+          # service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+           #project_id: ads-ai-101  # e.g. "my-project-123"
+ 
+       # 2) Authenticate to Google Cloud
+       # Use google-github-actions/auth@v1 to authenticate using your service account key
+       - name: Authenticate to Google Cloud
+         uses: google-github-actions/auth@v1
+         with:
+           # This secret must contain your service account JSON
+           credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+ 
+ 
+       # 3) Deploy the Cloud Function 
+       - name: Deploy globalapi
+         run: |
+          gcloud functions deploy global_api --runtime nodejs20 --trigger-http --allow-unauthenticated --memory 256  --region asia-south1  --entry-point app --source . --egress-settings all --region asia-south1 --set-env-vars STATIC_IP=35.207.195.71,NAME=TATA --vpc-connector rescale-vpc-connector
+ #. ############## End ## invoicedeploy.yml.yml ####################
