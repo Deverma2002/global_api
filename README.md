@@ -10,8 +10,8 @@ Steps to get the proxy credentials
 1. use the post API to to get the authentication token
 
     curl -X POST   https://asia-south1-ads-ai-101.cloudfunctions.net/global_api/api/login   -H "Content-Type: application/json"   -d '{
-    "clientId": "rescale.admin",
-    "clientSecret": "rescale.admin123"
+    "clientId": "admin",
+    "clientSecret": "admin123"
   }'
 
  2. use the get API with the token recieved from above
