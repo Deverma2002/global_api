@@ -5,10 +5,10 @@ const crypto = require('crypto');
 const OTP = require('../models/otp'); // Import the OTP Mongoose model
 
 // Your Kaleyra API credentials (hardcoded)
-const sid = "HXIN1812247626IN";
-const apiKey = "A681a2570ca9c3ef8e557dad7a898c646";
+const sid = "HXINfrefer247626IN";
+const apiKey = "A681a2570cefsrfrda898c646";
 const baseUrl = "https://api.in.kaleyra.io";
-const templateId = "1207161710760846658";
+const templateId = "1207456789876658";
 const sender = "FINCSH";
 const validity = 5; // Validity in minutes
 
