@@ -1,14 +1,4 @@
 
-// const PROXY_HOST = 'pr.oxylabs.io';
-// const PROXY_PORT = 7777;
-// const PROXY_USER = 'customer-rescale_grHwT-cc-IN';
-// const PROXY_PASS = '==44w_KGdqMhYzf';
-
-
-// const PROXY_HOST = 'gw.dataimpulse.com';
-// const PROXY_PORT = 823;
-// const PROXY_USER = 'a8fe6086811297fefc35__cr.in';
-// const PROXY_PASS = 'ba305bee21f0ae1d';
 
 
 // This file defines the API routes for authentication and proxy credentials.
@@ -27,15 +17,10 @@ const BACKEND_SERVICE_CLIENT_SECRET = 'rescale.admin123';
 
 
 
-// const PROXY_HOST = 'gw.dataimpulse.com';
-// const PROXY_PORT = 823;
-// const PROXY_USER = 'a8fe6086811297fefc35__cr.in';
-// const PROXY_PASS = 'ba305bee21f0ae1d';
-
 const PROXY_HOST = 'pr.oxylabs.io';
 const PROXY_PORT = 7777;
-const PROXY_USER = 'customer-rescale_grHwT-cc-IN';
-const PROXY_PASS = '==44w_KGdqMhYzf';
+const PROXY_USER = 'customer-ytdeiusfie_grHwT-cc-IN';
+const PROXY_PASS = '==44dewfoewfoif';
 
 /**
  * Endpoint for a backend service to obtain a JWT.
